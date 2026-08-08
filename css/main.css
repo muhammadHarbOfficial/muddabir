@@ -105,6 +105,10 @@ img {
     align-items: center;
 }
 
+body {
+    background-color: #F9FAFB;
+}
+
 /* h1, h2, h3, h4, h5, h6 {
     color: #281018;
 } */
@@ -121,6 +125,7 @@ img {
     border-left: 1px solid #e5e7eb;
     z-index: 1000;
     display: none;
+    background-color: var(--text-white);
 }
 
 .sidebar .sidebar-inner {
@@ -470,6 +475,8 @@ img {
 }
 
 /*? End Header Section */
+
+  /*? Start Card Section  */
 .current-balance {
     grid-column: span 2 / span 2;
     grid-row-start: 2;
@@ -486,6 +493,51 @@ img {
     grid-column-start: 5;
     grid-row-start: 2;
 }
+
+.card .card-inner {
+    gap: 10px;
+    box-shadow: 0 1px 3px 0 #0000001a,        0 1px 2px -1px #0000001a;
+    border: 1px solid var(--text-gray-200);
+    padding: 32px;
+    background-color: var(--text-white);
+    border-radius: 16px;
+    transition: box-shadow 0.3s;
+    -webkit-transition: box-shadow 0.3s;
+    -moz-transition: box-shadow 0.3s;
+    -ms-transition: box-shadow 0.3s;
+    -o-transition: box-shadow 0.3s;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
+}
+
+.card .card-inner:hover {
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.card .card-inner .label {
+    font-size: 14px;
+    color: var(--text-gray-500);
+}
+
+.card .card-inner .amount {
+    font-size: 38px;
+    font-weight: 900;
+    color: var(--text-gray-900);
+}
+
+.card .card-inner .change {
+    font-size: 14px;
+    &.bg-green {
+        color: var(--text-green-600);
+    }
+    &.bg-red {
+        color: var(--text-red-600);
+    }
+}
+
+ /*? End Card Section  */
 
 .dashboard-widget {
     grid-column: span 2 / span 2;
