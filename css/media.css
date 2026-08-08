@@ -1,0 +1,123 @@
+
+@media (max-width: 767px) {
+    .side-menu {
+        display: none;
+    }
+
+    .main-dashboard {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .header-section .container {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .header-section .heading-profile {
+        justify-content: space-between;
+                width: 100%;
+        
+    }
+
+
+
+    .header-section .heading-profile .profile p {
+        display: none;
+    }
+
+    /* .header-section  .connected {
+        width: 100%;
+        text-align: center;
+    }*/
+
+    .header-section  .connected {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+@media (min-width:768px) {
+    .side-menu {
+        width: 100px;
+    }
+
+    .side-menu .title .side-header {
+        display: none;
+    }
+    
+    .side-menu .title .img {
+        width: 100%;
+    }
+
+    .main-links .link .link-text span {
+        display: none;
+    }
+
+    .head-proceed {
+        display: none;
+    }
+
+    .fast-proceeds .proceed .proceed-text span {
+        display: none;
+    }
+
+    .main-dashboard {
+        margin-right: 120px;
+    }
+
+    .header-section .heading-profile {
+        justify-content: flex-end;
+    }
+
+    .header-section .heading-profile .profile {
+            flex-basis: 70%;
+
+    }
+
+    .header-section .heading-profile .profile p {
+        display: block;
+    }
+     .header-section  .connected {
+         position: absolute;
+        top: 50%;
+        right: 150px;
+        transform: translate(-50%, -50%);
+    }
+/*
+    .header-section .heading-title {
+        order: 1;
+    } */
+
+    /* .header-section .heading-profile {
+        order: 3;
+    }  */
+}
+
+
+@media (min-width: 1280px) {
+    .side-menu {
+        width: 260px;
+    }
+    .side-menu .title .side-header {
+        display: block;
+    }
+
+    .side-menu .title .img {
+        width: 25%;
+    }
+
+    .main-links .link .link-text span {
+        display: block;
+    }
+
+    .fast-proceeds .proceed .proceed-text span {
+        display: block;
+    }
+
+    .main-dashboard {
+        margin-right: 290px;
+        margin-left: 30px;
+    }
+}
