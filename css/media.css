@@ -13,8 +13,8 @@
 
 @media (min-width: 992px) {
     .container {
-    min-width: calc(100vw - (270px + 20px));
-    column-gap: 20px;
-    row-gap: 40px;
+        min-width: calc(100vw - (270px + 20px));
+        column-gap: 20px;
+        row-gap: 40px;
     }
 }

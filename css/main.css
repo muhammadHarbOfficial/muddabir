@@ -476,7 +476,7 @@ body {
 
 /*? End Header Section */
 
-  /*? Start Card Section  */
+  /*? Start Cards' Sections  */
 .current-balance {
     grid-column: span 2 / span 2;
     grid-row-start: 2;
@@ -539,12 +539,15 @@ body {
 
  /*? End Card Section  */
 
+ /*? Start Dashboard Widget for Active Activities */
+
 .dashboard-widget {
     grid-column: span 2 / span 2;
     grid-row: span 2 / span 2;
     grid-row-start: 3;
 }
 
+    /*? End Dashboard Widget for Active Activities */
 .bills-card {
     grid-column: span 2 / span 2;
     grid-row: span 2 / span 2;
