@@ -15,6 +15,6 @@
     .container {
         min-width: calc(100vw - (270px + 20px));
         column-gap: 20px;
-        row-gap: 40px;
+        row-gap: 20px;
     }
 }

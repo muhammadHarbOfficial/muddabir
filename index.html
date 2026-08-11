@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" href="./images/favicon.png" type="image/png">
-        <title>مدبّر</title>
+        <title>مدبّر | إدارة أموالك بذكاء</title>
         <link rel="stylesheet" href="./css/all.min.css">
         <link rel="stylesheet" href="./css/main.css">
         <link rel="stylesheet" href="./css/media.css" >
@@ -157,6 +157,7 @@
                 </div>
             </div>
             <!--? End Cards' Section -->
+            <!--? Start Current Activities -->
             <div class="dashboard-widget">
                 <div class="card-inner d-flex flex-col gap-15">
                     <h3>الأنشطة الحديثة</h3>
@@ -191,8 +192,333 @@
                     </div>
                 </div>
             </div>
-            <div class="bills-card">bills-card</div>
-            <div class="transaction-card">transaction-card</div>
+            <!--? End Current Activities -->
+            <!--? Start Monthly Bills -->
+            <div class="bills-card">
+                <div class="card-inner">
+                    <div class="header-container d-flex align-items-center">
+                        <h3>الفواتير الشهرية</h3>
+                        <span class="view-all-head txt-sm">عرض الكل
+                            <i class="fa-solid fa-chevron-left txt-xs"></i>
+                        </span>
+                    </div>
+                    <div class="bills-summary">
+                        <p class="total-amount">1920 جنية</p>
+                        <span class="total-bills txt-sm">إجمالي الفواتير الشهرية</span>
+                    </div>
+                    <div class="bills-grid">
+                        <div class="bill internt">
+                            <span class="icon bg-blue d-flex align-items-center justify-content-center">
+                                <i class="fa-solid fa-wifi"></i>
+                            </span>
+                            <p class="type txt-xs">إنترنت</p>
+                            <p class="amount">450 جنية</p>
+                            <span class="duration red">يستحق في 3 أيام</span>
+                        </div>
+                        <div class="bill electricity">
+                            <span class="icon bg-yellow d-flex align-items-center justify-content-center">
+                                <i class="fa-solid fa-bolt"></i>
+                            </span>
+                            <p class="type txt-xs">كهرباء</p>
+                            <p class="amount">400 جنية</p>
+                            <span class="duration orange">يستحق في 5 أيام</span>
+                        </div>
+                        <div class="bill phone">
+                            <span class="icon bg-green d-flex align-items-center justify-content-center">
+                                <i class="fa-solid fa-phone"></i>
+                            </span>
+                            <p class="type txt-xs">هاتف</p>
+                            <p class="amount">290 جنية</p>
+                            <span class="duration green">يستحق في 10 أيام</span>
+                        </div>
+                        <div class="bill netflix">
+                            <span class="icon bg-red d-flex align-items-center justify-content-center">
+                                <i class="fa-solid fa-tv"></i>
+                            </span>
+                            <p class="type txt-xs">Netflix</p>
+                            <p class="amount">780 جنية</p>
+                            <span class="duration">يستحق في 15 أيام</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--? End Monthly Bills -->
+            <!--? Start Last Transaction -->
+            <div class="transaction-card">
+                <div class="card-inner d-flex flex-col">
+                    <div class="header-container d-flex align-items-center">
+                        <h3>المعاملات الأخيرة</h3>
+                        <span class="view-all-head txt-sm">عرض الكل
+                            <i class="fa-solid fa-chevron-left txt-xs"></i>
+                        </span>
+                    </div>
+                    <div class="table">
+                        <div class="table-wrapper">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>المعاملة</th>
+                                        <th>الفئة</th>
+                                        <th>التاريخ</th>
+                                        <th>الحالة</th>
+                                        <th>المبلغ</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex align-items-center gap-15">
+                                                <img src="images/avatar-2.jpg" alt="User Image">
+                                                <div>
+                                                    <p class="username">محمود النجار</p>
+                                                    <span class="user-role txt-xs">تحويل أموال</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            
+                                            <span class="badge bg-green d-flex align-items-center txt-xs">
+                                                <i class="fa-solid fa-arrow-down"></i>
+                                                دخل</span>
+                                        </td>
+                                        <td>
+                                            <span class="date">١٤ أكتوبر ٢٠٢٥</span>
+                                        </td>
+                                        <td>
+                                            <span class="status badge bg-green txt-xs">مكتمل</span>
+                                        </td>
+                                        <td>
+                                            <span class="amount green">+350 جنية</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex align-items-center gap-15">
+                                                <span class="icon-img orange d-flex align-items-center justify-content-center">
+                                                    <i class="fa-solid fa-utensils"></i>
+                                                </span>
+                                                <div>
+                                                    <p class="username">مطعم Meat moot</p>
+                                                    <span class="user-role txt-xs">دفع مطعم</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            
+                                            <span class="badge bg-orange d-flex align-items-center txt-xs">
+                                                <i class="fa-solid fa-utensils"></i>
+                                                طعام</span>
+                                        </td>
+                                        <td>
+                                            <span class="date">١14 أكتوبر، 2025</span>
+                                        </td>
+                                        <td>
+                                            <span class="status badge bg-green txt-xs">مكتمل</span>
+                                        </td>
+                                        <td>
+                                            <span class="amount">-2200 جنية</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex align-items-center gap-15">
+                                                <span class="icon-img blue d-flex align-items-center justify-content-center">
+                                                    <i class="fa-solid fa-cart-shopping"></i>
+                                                </span>
+                                                <div>
+                                                    <p class="username">مشتريات Amazon</p>
+                                                    <span class="user-role txt-xs">تسوق إلكتروني</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            
+                                            <span class="badge bg-blue d-flex align-items-center txt-xs">
+                                                <i class="fa-solid fa-cart-shopping"></i>
+                                                تسوق</span>
+                                        </td>
+                                        <td>
+                                            <span class="date">13 أكتوبر، 2025</span>
+                                        </td>
+                                        <td>
+                                            <span class="status badge bg-green txt-xs">مكتمل</span>
+                                        </td>
+                                        <td>
+                                            <span class="amount">-1250 جنية</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex align-items-center gap-15">
+                                                <img src="images/avatar-1.jpg" alt="User Image">
+                                                <div>
+                                                    <p class="username">عمر المهدي</p>
+                                                    <span class="user-role txt-xs">دفع فاتورة مقسمة</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            
+                                            <span class="badge bg-purple d-flex align-items-center txt-xs">
+                                                <i class="fa-solid fa-users"></i>
+                                                فاتورة مقسمة</span>
+                                        </td>
+                                        <td>
+                                            <span class="date">13 أكتوبر، 2025</span>
+                                        </td>
+                                        <td>
+                                            <span class="status badge bg-green txt-xs">مكتمل</span>
+                                        </td>
+                                        <td>
+                                            <span class="amount">-1400  جنية</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex align-items-center gap-15">
+                                                <img src="images/avatar-3.jpg" alt="User Image">
+                                                <div>
+                                                    <p class="username">محمد عوض</p>
+                                                    <span class="user-role txt-xs">دفع عمل حر</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            
+                                            <span class="badge bg-green d-flex align-items-center txt-xs">
+                                                <i class="fa-solid fa-briefcase"></i>
+                                                عمل</span>
+                                        </td>
+                                        <td>
+                                            <span class="date">12 أكتوبر، 2025</span>
+                                        </td>
+                                        <td>
+                                            <span class="status badge bg-green txt-xs">مكتمل</span>
+                                        </td>
+                                        <td>
+                                            <span class="amount green">+2500 جنية</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex align-items-center gap-15">
+                                                <span class="icon-img red d-flex align-items-center justify-content-center">
+                                                    <i class="fa-solid fa-gas-pump"></i>
+                                                </span>
+                                                <div>
+                                                    <p class="username">محطة وقود Shell</p>
+                                                    <span class="user-role txt-xs">شراء وقود</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            
+                                            <span class="badge bg-red d-flex align-items-center txt-xs">
+                                                <i class="fa-solid fa-gas-pump"></i>
+                                                مواصلات</span>
+                                        </td>
+                                        <td>
+                                            <span class="date">١12 أكتوبر، 2025</span>
+                                        </td>
+                                        <td>
+                                            <span class="status badge bg-yellow txt-xs">معلق</span>
+                                        </td>
+                                        <td>
+                                            <span class="amount">-700 جنية</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex align-items-center gap-15">
+                                                <span class="icon-img purple d-flex align-items-center justify-content-center">
+                                                    <i class="fa-solid fa-film"></i>
+                                                </span>
+                                                <div>
+                                                    <p class="username">اشتراك Netflix</p>
+                                                    <span class="user-role txt-xs">اشتراك شهري</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            
+                                            <span class="badge bg-purple d-flex align-items-center txt-xs">
+                                                <i class="fa-solid fa-tv"></i>
+                                                ترفيه</span>
+                                        </td>
+                                        <td>
+                                            <span class="date">11 أكتوبر، 2025</span>
+                                        </td>
+                                        <td>
+                                            <span class="status badge bg-green txt-xs">مكتمل</span>
+                                        </td>
+                                        <td>
+                                            <span class="amount">-780 جنية</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex align-items-center gap-15">
+                                                <span class="icon-img blue d-flex align-items-center justify-content-center">
+                                                    <i class="fa-solid fa-dumbbell"></i>
+                                                </span>
+                                                <div>
+                                                    <p class="username">نادي FitLife</p>
+                                                    <span class="user-role txt-xs">عضوية شهرية</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            
+                                            <span class="badge bg-blue d-flex align-items-center txt-xs">
+                                                <i class="fa-solid fa-heart-pulse"></i>
+                                                صحة</span>
+                                        </td>
+                                        <td>
+                                            <span class="date">10 أكتوبر، 2025</span>
+                                        </td>
+                                        <td>
+                                            <span class="status badge bg-green txt-xs">مكتمل</span>
+                                        </td>
+                                        <td>
+                                            <span class="amount">-500 جنية</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex align-items-center gap-15">
+                                                <span class="icon-img green d-flex align-items-center justify-content-center">
+                                                    <i class="fa-solid fa-graduation-cap"></i>
+                                                </span>
+                                                <div>
+                                                    <p class="username">كورس Jonas</p>
+                                                    <span class="user-role txt-xs">دورة تدريبية</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            
+                                            <span class="badge bg-green d-flex align-items-center txt-xs">
+                                                <i class="fa-solid fa-book"></i>
+                                                تعليم</span>
+                                        </td>
+                                        <td>
+                                            <span class="date">9 أكتوبر، 2025</span>
+                                        </td>
+                                        <td>
+                                            <span class="status badge bg-green txt-xs">مكتمل</span>
+                                        </td>
+                                        <td>
+                                            <span class="amount">-250 جنية</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--? End Last Transaction -->
+            
             <div class="budget-overview-card">udget-overview-card</div>
             <div class="income-vs-expenses-card">income-vs-expenses-card</div>
             <div class="account-summary-card">account-summary-card</div>

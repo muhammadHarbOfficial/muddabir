@@ -1,6 +1,5 @@
 /*? Global Variables */
 
-
 :root {
     --text-red-100: oklch(93.6% .032 17.717);
     --text-red-500: oklch(63.7% .237 25.331);
@@ -140,10 +139,6 @@ img {
 body {
     background-color: #F9FAFB;
 }
-
-/* h1, h2, h3, h4, h5, h6 {
-    color: #281018;
-} */
 
 /*? Start Side Bar */
 
@@ -327,6 +322,7 @@ body {
 /*? Start Header Section */
 .header {
     grid-column: span 6 / span 6;
+    margin-bottom: 30px;
 }
 
 .header .header-inner {
@@ -508,7 +504,8 @@ body {
 
 /*? End Header Section */
 
-  /*? Start Cards' Sections  */
+/*? Start Cards' Sections  */
+
 .current-balance {
     grid-column: span 2 / span 2;
     grid-row-start: 2;
@@ -547,9 +544,9 @@ body {
     }
 }
 
- /*? End Card Section  */
+/*? End Card Section  */
 
- /*? Start Dashboard Widget for Active Activities */
+/*? Start Dashboard Widget for Active Activities */
 
 .dashboard-widget {
     grid-column: span 2 / span 2;
@@ -653,13 +650,126 @@ body {
     }
 }
 
-    /*? End Dashboard Widget for Active Activities */
+/*? End Dashboard Widget for Active Activities */
+
+/*? Start Monthly Bills */
+
 .bills-card {
     grid-column: span 2 / span 2;
     grid-row: span 2 / span 2;
     grid-column-start: 1;
     grid-row-start: 5;
 }
+
+.header-container {
+    justify-content: space-between;
+    h3 {
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--text-gray-900);
+    }
+    span.view-all-head {
+        font-weight: 500;
+        font-size: 14px;
+        color: var(--text-gray-600);
+        cursor: pointer;
+        transition: color 0.3s;
+        -webkit-transition: color 0.3s;
+        -moz-transition: color 0.3s;
+        -ms-transition: color 0.3s;
+        -o-transition: color 0.3s;
+        &:hover {
+            color: var(--text-gray-900);
+        }
+    }
+}
+
+.bills-summary {
+    text-align: center;
+    margin-block: 16px;
+}
+
+.bills-summary .total-amount {
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--text-gray-900)
+}
+
+.bills-summary .total-bills {
+    color: var(--text-gray-500);
+    font-size: 14px;
+}
+
+.card-inner .bills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.card-inner .bills-grid .bill {
+    background-color: var(--text-gray-50);
+    border: 1px solid var(--text-gray-100);
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+    padding: 12px;
+    text-align: center;
+    .icon {
+        width: 36px;
+        height: 36px;
+        margin-top: 3px;
+        margin-bottom: 8px;
+        border-radius: 8px;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        -ms-border-radius: 8px;
+        -o-border-radius: 8px;
+        font-size: 14px;
+        margin-inline: auto;
+        &.bg-blue {
+            background-color: var(--text-blue-100);
+            color: var(--text-blue-600);
+        }
+        &.bg-yellow {
+            background-color: var(--text-yellow-100);
+            color: var(--text-yellow-600);
+        }
+        &.bg-green {
+            background-color: var(--text-green-100);
+            color: var(--text-green-600);
+        }
+        &.bg-red {
+            background-color: var(--text-red-100);
+            color: var(--text-red-600);
+        }
+    }
+    .type {
+        color: var(--text-gray-500);
+    }
+    .amount {
+        color: var(--text-gray-900);
+        font-weight: 600;
+    }
+    .duration {
+        color: var(--text-gray-500);
+        font-size: 12px;
+        &.red {
+            color: var(--text-red-500);
+        }
+        &.orange {
+            color: var(--text-orange-500);
+        }
+        &.green {
+            color: var(--text-green-500);
+        }
+    }
+}
+
+/*? End Monthly Bills */
+
+/*? Start Last Transactions */
 
 .transaction-card {
     grid-column: span 4 / span 4;
@@ -668,6 +778,132 @@ body {
     grid-row-start: 3;
 }
 
+.transaction-card .card-inner {
+    justify-content: space-between;
+    height: 100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    margin-top: 20px;
+    line-height: 1.43;
+}
+
+table thead {
+    color: var(--text-gray-700);
+    font-weight: 600;
+    border-bottom: 1px solid var(--text-gray-100);
+    text-align: right;
+}
+
+table thead th {
+    padding: 12px 8px;
+}
+
+table tbody tr {
+    border-bottom: 1px solid var(--text-gray-50);
+}
+
+table tbody tr:last-child {
+    border: none;
+}
+
+table tbody td {
+    padding: 16px 8px;
+}
+
+table tbody td img,
+table tbody td .icon-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    &.orange {
+        color: var(--text-orange-500);
+        background-color: var(--text-orange-100);
+    }
+    &.blue {
+        color: var(--text-blue-500);
+        background-color: var(--text-blue-100);
+    }
+    &.red {
+        color: var(--text-red-500);
+        background-color: var(--text-red-100);
+    }
+    &.purple {
+        color: var(--text-purple-500);
+        background-color: var(--text-purple-100);
+    }
+    &.green {
+        color: var(--text-green-500);
+        background-color: var(--text-green-100);
+    }
+}
+
+table tbody td .username {
+    font-weight: 600;
+    color: var(--text-gray-900);
+}
+
+table tbody td .user-role {
+    color: var(--text-gray-500);
+}
+
+table tbody td .badge {
+    width: fit-content;
+    gap: 5px;
+    padding: 4px 10px;
+    font-weight: 400;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+    &.bg-green {
+        color: var(--text-green-800);
+        background-color: var(--text-green-100);
+    }
+    &.bg-orange {
+        color: var(--text-orange-800);
+        background-color: var(--text-orange-100);
+    }
+    &.bg-blue {
+        color: var(--text-blue-600);
+        background-color: var(--text-blue-100);
+    }
+    &.bg-purple {
+        color: var(--text-purple-600);
+        background-color: var(--text-purple-100);
+    }
+    &.bg-red {
+        color: var(--text-red-600);
+        background-color: var(--text-red-100);
+    }
+
+    &.status {
+        color: var(--text-gray-600);
+    }
+    &.bg-yellow {
+        background-color: var(--text-yellow-100);
+    }
+}
+
+table tbody td .date {
+    color: var(--text-gray-600);
+}
+
+table tbody td .amount {
+    font-weight: 600;
+    &.green {
+        color: var(--text-green-600);
+    }
+}
+/*? End Last Transactions */
 .budget-overview-card {
     grid-column: span 2 / span 2;
     grid-row: span 4 / span 4;
