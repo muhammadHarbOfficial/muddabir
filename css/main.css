@@ -904,11 +904,220 @@ table tbody td .amount {
     }
 }
 /*? End Last Transactions */
+
+/*? Start Budget Overview */
+
 .budget-overview-card {
     grid-column: span 2 / span 2;
     grid-row: span 4 / span 4;
     grid-row-start: 7;
 }
+
+.budget-overview-card .summary {
+    background-image: linear-gradient(90deg, #eff6ff, #eef2ff);
+    border: 1px solid #dbeafe;
+    padding: 16px;
+    margin-block: 24px;
+    border-radius: 16px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
+}
+
+.budget-overview-card .summary .summary-top {
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.budget-overview-card .summary .summary-top .label {
+    color: var(--text-blue-600);
+    font-weight: 500;
+}
+
+.budget-overview-card .summary .summary-top .total-amount {
+    color: var(--text-blue-900);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.budget-overview-card .summary .summary-top .remaining-sub {
+    color: var(--text-gray-500);
+}
+
+.budget-overview-card .summary .summary-top .remaining-amount {
+    font-weight: 600;
+    color: var(--text-green-600);
+    font-size: 16px;
+}
+
+.budget-overview-card .summary .progress-wrapper .progress-info {
+    justify-content: space-between;
+    font-size: 12px;
+    margin-top: 12px;
+    margin-bottom: 4px;
+    color: var(--text-gray-600);
+}
+
+.budget-overview-card .summary .progress-wrapper .progress-bar {
+    height: 8px;
+    width: 100%;
+    background-color: var(--text-gray-200);
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.budget-overview-card .summary .progress-wrapper .progress-bar .progress-fill {
+    background: linear-gradient(to right, #2b7fff, #615fff);
+    width: 84%;
+    height: 100%;
+    border-radius: inherit;
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    -ms-border-radius: inherit;
+    -o-border-radius: inherit;
+}
+
+.budget-overview-card .category {
+    background-color: #f9fafb80;
+    border: 1px solid #e5e7ebcc;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+    padding: 16px;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+}
+
+.budget-overview-card .category:hover {
+    background-color: #f3f4f6cc;
+    border-color: #d1d5dbe6;
+    transform: translateY(-1px);
+    -webkit-transform: translateY(-1px);
+    -moz-transform: translateY(-1px);
+    -ms-transform: translateY(-1px);
+    -o-transform: translateY(-1px);
+    box-shadow: 0 4px 6px -1px #0000001a, 0 2px 4px -1px #0000001a;
+}
+
+.budget-overview-card .category .category-header {
+    justify-content: space-between;
+}
+
+.budget-overview-card .category .category-header .icon-box {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+    padding: 12px;
+    font-size: 18px;
+    &.orange {
+        background-color: var(--text-orange-100);
+        color: var(--text-orange-500)
+    }
+    &.red {
+        background-color: var(--text-red-100);
+        color: var(--text-red-500)
+    }
+    &.pink {
+        background-color: var(--text-pink-100);
+        color: var(--text-pink-500)
+    }
+    &.green {
+        background-color: var(--text-green-100);
+        color: var(--text-green-500)
+    }
+}
+
+.budget-overview-card .category .category-header .total-category {
+    margin-inline-end: auto;
+}
+
+.budget-overview-card .category .category-header .total-category .type,
+.budget-overview-card .category .category-header .remaining-category-overview .remaining-category-amount {
+    font-weight: 600;
+    color: var(--text-gray-900);
+}
+
+.budget-overview-card .category .category-header .total-category .total-overview-category {
+    color: var(--text-gray-500);
+}
+
+.budget-overview-card .category .category-header .remaining-category-overview .remaining-category-precent {
+    padding: 2px 8px;
+    font-weight: 500;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    margin-top: 4px;
+    &.green {
+        color: var(--text-green-800);
+        background-color: var(--text-green-100);
+    }
+    &.red {
+        color: var(--text-red-800);
+        background-color: var(--text-red-100);
+    }
+    &.yellow {
+        color: var(--text-yellow-800);
+        background-color: var(--text-yellow-100);
+    }
+}
+
+.budget-overview-card .category .progress-bar {
+    margin-top: 8px;
+    height: 8px;
+    width: 100%;
+    background-color: var(--text-gray-200);
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    .progress-fill {
+        height: inherit;
+        border-radius: inherit;
+        -webkit-border-radius: inherit;
+        -moz-border-radius: inherit;
+        -ms-border-radius: inherit;
+        -o-border-radius: inherit;
+        &.orange {
+            background-color: var(--text-orange-500);
+            width: 50%;
+        }
+        &.red {
+            background-color: var(--text-red-500);
+            width: 100%;
+        }
+        &.pink {
+            background-color: var(--text-pink-500);
+            width: 80%;
+        }
+        &.green {
+            background-color: var(--text-green-500);
+            width: 86%;
+        }
+    }
+}
+
+
+
+/*? Start Budget Overview */
+
 
 .income-vs-expenses-card {
     grid-column: span 2 / span 2;
