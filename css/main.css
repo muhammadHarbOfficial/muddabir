@@ -1114,10 +1114,9 @@ table tbody td .amount {
     }
 }
 
-
-
 /*? Start Budget Overview */
 
+/*? Start Income Vs Expenses */
 
 .income-vs-expenses-card {
     grid-column: span 2 / span 2;
@@ -1126,6 +1125,94 @@ table tbody td .amount {
     grid-row-start: 7;
 }
 
+.income-vs-expenses-card .charts-inner .income-chart-legend {
+    gap: 8px;
+    margin-block: 16px;
+    color: #64748b;
+    font-size: 12px;
+}
+
+.income-vs-expenses-card .charts-inner .income-chart-legend .chart-legend-item {
+    gap: 14px;
+}
+.income-vs-expenses-card .charts-inner .income-chart-legend .chart-legend-item .chart-legend-color {
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    &.green {
+        background-color: #10b981;
+    }
+    &.red {
+        background-color: #ef4444;
+    }
+}
+
+.income-vs-expenses-card .charts-inner .charts-group {
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 100%;
+    padding-block: 16px;;
+}
+
+.income-vs-expenses-card .charts-inner .charts-group .chart-group {
+    margin-inline: 4px;
+    flex: 1;
+    gap: 8px;
+}
+
+.income-vs-expenses-card .charts-inner .charts-group .chart-group .bars-group {
+    align-items: flex-end;
+    gap: 2px;
+    height: 160px;
+}
+
+.income-vs-expenses-card .charts-inner .charts-group .chart-group .bars-group .chart-bar-income {
+    height: 95px;
+    border-radius: 3px 3px 0 0;
+    -webkit-border-radius: 3px 3px 0 0;
+    -moz-border-radius: 3px 3px 0 0;
+    -ms-border-radius: 3px 3px 0 0;
+    -o-border-radius: 3px 3px 0 0;
+    width: 16px;
+    background-color: #10b981;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+}
+
+.income-vs-expenses-card .charts-inner .charts-group .chart-group .bars-group .chart-bar-expenses {
+    height: 45px;
+    border-radius: 3px 3px 0 0;
+    -webkit-border-radius: 3px 3px 0 0;
+    -moz-border-radius: 3px 3px 0 0;
+    -ms-border-radius: 3px 3px 0 0;
+    -o-border-radius: 3px 3px 0 0;
+    width: 16px;
+    background-color: #ef4444;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+}
+
+.income-vs-expenses-card .charts-inner .charts-group .chart-group .bars-group .chart-bar-income:hover,
+.income-vs-expenses-card .charts-inner .charts-group .chart-group .bars-group .chart-bar-expenses:hover {
+    opacity: 0.8;
+    content: attr(title);
+}
+
+.income-vs-expenses-card .charts-inner .charts-group .chart-group .chart-label {
+    color: #64748b;
+    font-size: 12px;
+}
+/*? Start Income Vs Expenses */
 .account-summary-card {
     grid-column: span 2 / span 2;
     grid-row: span 2 / span 2;
