@@ -1290,12 +1290,254 @@ table tbody td .amount {
 .account-parent .account .account-header .account-amount {
     font-weight: 600;
     color: var(--text-gray-900);
+    &.red {
+        color: var(--text-red-600);
+    }
 }
 /*? End Account Summary */
+
+/*? Start Payment Cards */
 
 .payments-card {
     grid-column: span 2 / span 2;
     grid-row: span 4 / span 4;
     grid-column-start: 5;
     grid-row-start: 7;
+    height: 100%;
 }
+
+.payments-card .card-inner {
+    height: 100%;
+}
+
+.payments-card .card-inner .payment-card {
+    margin-block-start: auto;
+}
+
+.payments-card .card-flip {
+    perspective: 1000px;
+}
+
+.payments-card .card-flip .card-flip-inner{
+    position: relative;
+    transform-style: preserve-3d;
+    width: 100%;
+    transition: transform 0.6s;
+    -webkit-transition: transform 0.6s;
+    -moz-transition: transform 0.6s;
+    -ms-transition: transform 0.6s;
+    -o-transition: transform 0.6s;
+}
+
+.payments-card .card-flip:hover .card-flip-inner {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+}
+
+.payments-card .card-flip .card-flip-inner .card-front {
+    padding: 28px;
+    color: white;
+    box-shadow: 0 10px 15px -3px #0000001a, 0 4px 6px -4px #0000001a;
+    position: relative;
+    &.bg-indigo {
+        background-color: var(--text-indigo-800);
+    }
+    &.bg-rose {
+        background-color: var(--text-rose-700);
+    }
+    &.bg-blue {
+        background-color: var(--text-blue-800);
+    }
+}
+
+.payments-card .card-flip .card-flip-inner .card-front .badge {
+    background-color: #ffffff24;
+    backdrop-filter: blur(8px);
+    border-radius: 120px;
+    -webkit-border-radius: 120px;
+    -moz-border-radius: 120px;
+    -ms-border-radius: 120px;
+    -o-border-radius: 120px;
+    color: #fff;
+    font-size: 14px;
+    padding: 6px 10px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.payments-card .card-flip .card-flip-inner .card-front .top {
+    justify-content: space-between;
+    margin-bottom: 32px;
+}
+
+.payments-card .card-flip .card-flip-inner .card-front .top .chip {
+    background-color: #ffffff33;
+    backdrop-filter: blur(8px);
+    width: 48px;
+    height: 32px;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+}
+
+.payments-card .card-flip .card-flip-inner .card-front .top .chip .chip-inner {
+    width: 24px;
+    height: 16px;
+    background-color: #ffffff88;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
+.payments-card .card-flip .card-flip-inner .card-front .card-num {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 8px;
+    font-family: monospace;
+}
+
+.payments-card .card-flip .card-flip-inner .card-front .card-info {
+    justify-content: space-between;
+}
+
+.payments-card .card-flip .card-flip-inner .card-front,
+.payments-card .card-flip .card-flip-inner .card-back {
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+    overflow: hidden;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.payments-card .card-flip .card-flip-inner .card-front .card-info .expired-txt {
+    letter-spacing: 0.3px;
+}
+
+.payments-card .card-flip .card-flip-inner .card-front .card-info .holder-txt,
+.payments-card .card-flip .card-flip-inner .card-front .card-info .expired-txt {
+    
+    &.blue {
+        color: var(--text-blue-100);
+        text-transform: uppercase;
+        
+}
+}
+
+.payments-card .card-flip .card-flip-inner .card-front .card-info .holder-name,
+.payments-card .card-flip .card-flip-inner .card-front .card-info .expired-date {
+    font-weight: 600;
+}
+
+.payments-card .card-flip .card-flip-inner .card-back {
+    color: white;
+    background-image: linear-gradient(120deg, #051026, #0b1220 45%, #0f1724);
+    padding: 16px;
+    justify-content: flex-start;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+}
+
+.payments-card .card-flip .card-flip-inner .card-back .mag-stripe {
+    background-image: linear-gradient(90deg, #000, #111 40%, #2b2b2b);
+    height: 52px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    margin-top: 6px;
+    box-shadow: inset 0 6px 14px #ffffff05;
+}
+
+.payments-card .card-flip .card-flip-inner .card-back .microprint {
+    color: #ffffff7a;
+    letter-spacing: 0.6px;
+    margin-top: 8px;
+    font-size: 10px;
+}
+
+.payments-card .card-flip .card-flip-inner .card-back .signature {
+    color: #111827;
+    background-image: linear-gradient(90deg, #f8fafc, #eef2f6);
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    align-items: center;
+    height: 36px;
+    margin-top: 10px;
+    padding: 6px 8px;
+    font-weight: 700;
+    position: relative;
+}
+
+.payments-card .card-flip .card-flip-inner .card-back .signature .scribble {
+    background-image: linear-gradient(90deg, #0000000f, #0000002e, #0000000f);
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    width: 86%;
+    height: 12px;
+    transform: skew(-10deg);
+    -webkit-transform: skew(-10deg);
+    -moz-transform: skew(-10deg);
+    -ms-transform: skew(-10deg);
+    -o-transform: skew(-10deg);
+}
+
+.payments-card .card-flip .card-flip-inner .card-back .signature .last4 {
+    color: #000000d9;
+    margin-left: 8px;
+    font-family: monospace;
+    font-size: 14px;
+}
+
+.payments-card .card-flip .card-flip-inner .card-back .cvv-row {
+    gap: 12px;
+    justify-content: flex-end;
+    margin-top: 12px;
+}
+
+.payments-card .card-flip .card-flip-inner .card-back .cvv-row .cvv-text {
+    color: var(--text-gray-300);
+    text-transform: uppercase;
+}
+
+.payments-card .card-flip .card-flip-inner .card-back .cvv-row .cvv-box {
+    color: #111827;
+    letter-spacing: 1px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    min-width: 48px;
+    padding: 8px 12px;
+    font-weight: 700;
+}
+/*? Start Payment Cards */
