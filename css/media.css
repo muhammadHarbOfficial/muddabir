@@ -1,20 +1,94 @@
 
 @media (max-width: 767px) {
-    
+        .container {
+            width: calc(100vw - 40px);
+            margin-inline: auto;
+        }
 }
 
 
 @media (min-width:768px) {
     .sidebar {
         display: block;
+        width: 100px;
+    }
+
+    .sidebar .logo-text {
+        display: none;
+    }
+
+    .sidebar .nav li span {
+        display: none;
+    }
+
+    .sidebar .quick-actions h3 {
+        display: none;
+    }
+
+    .sidebar .quick-buttons .sidebar-action-text {
+        display: none;
+    }
+
+    .container {
+        min-width: calc(100vw - 100px);
+        max-width: calc(100vw - 100px);
+        margin-inline-start: auto;
+    }
+
+    .current-balance {
+        grid-column: span 2 / span 2;
+        grid-row-start: 2;
+    }
+
+    .income-card {
+    grid-column: span 2 / span 2;
+    grid-column-start: 3;
+    grid-row-start: 2;
+}
+
+.expenses-card {
+    grid-column: span 2 / span 2;
+    grid-column-start: 5;
+    grid-row-start: 2;
+    }
+    .card .card-inner .amount {
+        font-size: 24px;
     }
 }
 
 
 @media (min-width: 992px) {
+    .sidebar {
+        width: 256px;
+    }
+    .sidebar .logo-text {
+        display: block;
+    }
+
+    .sidebar .nav li span {
+        display: block;
+    }
+
+    .sidebar .quick-actions h3 {
+        display: block;
+    }
+
+    .sidebar .quick-buttons .sidebar-action-text {
+        display: block;
+    }
     .container {
         min-width: calc(100vw - (270px + 20px));
-        column-gap: 20px;
-        row-gap: 20px;
+        max-width: calc(100vw - (270px + 20px));
+        margin-inline-start: 270px;
+    }
+
+    .card .card-inner .amount {
+    font-size: 38px;
+    }
+
+    .dashboard-widget {
+        grid-column: span 2 / span 2;
+        grid-row: span 2 / span 2;
+        grid-row-start: 3;
     }
 }

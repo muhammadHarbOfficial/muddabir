@@ -145,7 +145,6 @@ body {
 .sidebar {
     position: fixed;
     right: 0;
-    width: 256px; 
     height: 100vh;
     backdrop-filter: blur(8px);
     box-shadow: 0px 10px 15px -3px #0000001a, 0px 4px 6px -4px #0000001a;
@@ -310,14 +309,13 @@ body {
 /*? End Side Bar */
 
 .container {
-    min-width: calc(100vw - (270px + 20px));
     display: grid;
     align-items: start;
     grid-template-columns: repeat(6, 1fr);
     grid-auto-rows: auto;
-    gap: 8px;
-    margin-inline-start: 270px;
     padding: 40px 20px;
+    column-gap: 20px;
+    row-gap: 20px;
 }
 
 /*? Start Header Section */
@@ -508,20 +506,33 @@ body {
 /*? Start Cards' Sections  */
 
 .current-balance {
-    grid-column: span 2 / span 2;
+    grid-column: span 6 / span 6;
     grid-row-start: 2;
+    min-height: 100%;
 }
 
 .income-card {
-    grid-column: span 2 / span 2;
-    grid-column-start: 3;
-    grid-row-start: 2;
+    grid-column: span 6 / span 6;
+    /* grid-column-start: 3; */
+    grid-row-start: 3;
+    min-height: 100%;
 }
 
 .expenses-card {
-    grid-column: span 2 / span 2;
-    grid-column-start: 5;
-    grid-row-start: 2;
+    grid-column: span 6/ span 6;
+    /* grid-column-start: 5; */
+    grid-row-start: 4;
+    min-height: 100%; 
+}
+
+.card {
+    height: 100%;
+}
+
+.card .card-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .card .card-inner .label {
@@ -552,7 +563,7 @@ body {
 .dashboard-widget {
     grid-column: span 2 / span 2;
     grid-row: span 2 / span 2;
-    grid-row-start: 3;
+    /* grid-row-start: 3; */
 }
 
 .dashboard-widget .card-inner h3 {
@@ -659,7 +670,7 @@ body {
     grid-column: span 2 / span 2;
     grid-row: span 2 / span 2;
     grid-column-start: 1;
-    grid-row-start: 5;
+    /* grid-row-start: 5; */
 }
 
 .header-container {
@@ -776,7 +787,7 @@ body {
     grid-column: span 4 / span 4;
     grid-row: span 4 / span 4;
     grid-column-start: 3;
-    grid-row-start: 3;
+    /* grid-row-start: 3; */
     height: 100%;
 }
 
@@ -912,7 +923,7 @@ table tbody td .amount {
 .budget-overview-card {
     grid-column: span 2 / span 2;
     grid-row: span 4 / span 4;
-    grid-row-start: 7;
+    /* grid-row-start: 7; */
     height: 100%;
 }
 .budget-overview-card .card-inner {
@@ -1128,7 +1139,7 @@ table tbody td .amount {
     grid-column: span 2 / span 2;
     grid-row: span 2 / span 2;
     grid-column-start: 3;
-    grid-row-start: 7;
+    /* grid-row-start: 7; */
     min-height: 100%;;
 }
 
@@ -1302,7 +1313,7 @@ table tbody td .amount {
     grid-column: span 2 / span 2;
     grid-row: span 4 / span 4;
     grid-column-start: 5;
-    grid-row-start: 7;
+    /* grid-row-start: 7; */
     height: 100%;
 }
 
